@@ -18,9 +18,6 @@ namespace UnityEssentials
         /// </summary>
         /// <remarks>This method overrides the default behavior to display the property's name and value
         /// in a custom layout. The property's value is retrieved and displayed as a string.</remarks>
-        /// <param name="position">The rectangle on the screen to use for the property GUI.</param>
-        /// <param name="property">The serialized property to display and edit.</param>
-        /// <param name="label">The label to display alongside the property in the Inspector.</param>
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             EditorGUI.LabelField(position, property.displayName);
