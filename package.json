@@ -1,7 +1,7 @@
 {
-    "name": "com.unityessentials.showonlyattribute",
+    "name": "com.unityessentials.readonlyattribute",
     "version": "1.0.0",
-    "displayName": "UnityEssentials ShowOnlyAttribute",
+    "displayName": "UnityEssentials ReadOnlyAttribute",
     "description": "This is a part of the UnityEssentials Ecosystem",
     "unity": "2022.1",
     "documentationUrl": "",
