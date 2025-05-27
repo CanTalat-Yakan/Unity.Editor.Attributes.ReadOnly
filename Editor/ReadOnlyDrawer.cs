@@ -5,13 +5,13 @@ using UnityEngine;
 namespace UnityEssentials
 {
     /// <summary>
-    /// Provides a custom property drawer for fields marked with the <see cref="ShowOnlyAttribute"/>.
+    /// Provides a custom property drawer for fields marked with the <see cref="ReadOnlyAttribute"/>.
     /// </summary>
     /// <remarks>This drawer renders the field as a read-only label in the Unity Inspector, displaying the
     /// field's name and value. It is intended for use with fields that should be visible in the Inspector but not
     /// editable by the user.</remarks>
-    [CustomPropertyDrawer(typeof(ShowOnlyAttribute))]
-    public class ShowOnlyDrawer : PropertyDrawer
+    [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
+    public class ReadOnlyDrawer : PropertyDrawer
     {
         /// <summary>
         /// Renders the custom GUI for a serialized property in the Unity Inspector.
