@@ -17,22 +17,12 @@ namespace UnityEssentials
         {
             EditorGUI.LabelField(position, property.displayName);
 
-            string valueString;
-            if (property.propertyType == SerializedPropertyType.Enum)
-            {
-                int index = property.enumValueIndex;
-                string enumName = (index >= 0 && index < property.enumDisplayNames.Length)
-                    ? property.enumDisplayNames[index]
-                    : "Unknown";
-                valueString = $"{enumName} ({index})";
-            }
-            else valueString = InspectorHookUtilities.GetPropertyValue(property)?.ToString();
+            var valuePosition = new Rect(position);
+            valuePosition.x = string.IsNullOrEmpty(property.displayName) ? 16 : 20 + EditorGUIUtility.labelWidth;
+            valuePosition.width = position.width;
 
-            var valuePosition = new Rect(position)
-            {
-                x = string.IsNullOrEmpty(property.displayName) ? 16 : 20 + EditorGUIUtility.labelWidth,
-                width = position.width,
-            };
+            var valueString = InspectorHookUtilities.GetPropertyValue(property)?.ToString();
+
             EditorGUI.LabelField(valuePosition, valueString, EditorStyles.wordWrappedLabel);
         }
 
