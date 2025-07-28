@@ -22,6 +22,7 @@ namespace UnityEssentials
             valuePosition.width = position.width;
 
             var valueString = InspectorHookUtilities.GetPropertyValue(property)?.ToString();
+            InspectorHook.MarkPropertyAsHandled(property.propertyPath);
 
             EditorGUI.LabelField(valuePosition, valueString, EditorStyles.wordWrappedLabel);
         }
