@@ -1,7 +1,10 @@
 {
-    "name": "UnityEssentials.ReadOnlyAttribute",
+    "name": "UnityEssentials.Editor.Attributes.ReadOnly.Editor",
     "rootNamespace": "UnityEssentials",
-    "references": [],
+    "references": [
+        "GUID:9fb86f0caf7d8a8488cd8aeb21105895",
+        "GUID:9a6bb239ccccf6645b460348af49b773"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
